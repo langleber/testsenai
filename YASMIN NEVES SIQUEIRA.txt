@@ -5,7 +5,7 @@
     $newName = "Novo Produto";
     $newPrice = 29.99;
 
-    $stmt = $db->prepare("DELETE produtos SET nome = :nome, preco = :preco WHERE id = :id");
+    $stmt = $db->prepare("UPDATE produtos SET nome = :nome, preco = :preco WHERE id = :id");
     $stmt->bindParam(':nome', $newName);
     $stmt->bindParam(':preco', $newPrice);
     $stmt->bindParam(':id', $id);
