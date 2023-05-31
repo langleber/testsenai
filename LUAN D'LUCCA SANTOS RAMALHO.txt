@@ -3,7 +3,7 @@
 
     $id = 1;
 
-    $stmt = $db->prepare("SELECT * FROM produtos WHERE id = :user");
+    $stmt = $db->prepare("SELECT * FROM produtos WHERE id = :id");
     $stmt->bindParam(':id', $id);
     $stmt->execute();
 
