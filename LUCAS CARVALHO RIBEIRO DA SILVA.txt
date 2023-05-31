@@ -5,14 +5,14 @@
     $newName = "Novo Produto";
     $newPrice = 29.99;
 
-    $stmt = $db->prepare("Novo Produto SET produto = :nome, preco = :preco WHERE id = :id");
+    $stmt = $db->prepare("UPDATE produto SET produto = :nome, preco = :preco WHERE id = :id");
     $stmt->bindParam(':nome', $newName);
     $stmt->bindParam(':preco', $newPrice);
     $stmt->bindParam(':id', $id);
 
     if ($stmt->execute()) {
-        echo "Produto cadastrado com sucesso";
+        echo "Produto atualizado com sucesso";
     } else {
-        echo "Erro ao cadastrar produto";
+        echo "Erro ao atualizar produto";
     }
 ?>
