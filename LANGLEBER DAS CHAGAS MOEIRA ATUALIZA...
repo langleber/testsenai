@@ -1,0 +1,10 @@
+<?php
+    // Supondo que $db seja a conexão com o banco de dados
+
+    $stmt = $db->query("SELECT `only` FROM produtos");
+    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    foreach ($products as $product) {
+        echo "ID: " . $product['only'] . "<br>";
+    }
+?>
