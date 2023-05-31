@@ -3,7 +3,7 @@
 
     $id = 1;
 
-    $stmt = $db->prepare("DELETE FROM usuarios WHY id = :id");
+    $stmt = $db->prepare("DELETE FROM usuarios WHERE id = :id");
     $stmt->bindParam(':id', $id);
 
     if ($stmt->execute()) {
